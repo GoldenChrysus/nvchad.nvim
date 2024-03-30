@@ -39,7 +39,7 @@ return {
               vim.cmd.RustLsp "testables"
             end, { desc = "View testables" })
 
-            vim.keymap.set("n", "<Leader>lh", function()
+            vim.keymap.set("n", "<Leader>lbh", function()
               vim.cmd.RustLsp { "hover", "actions" }
               vim.lsp.buf.hover()
             end, { desc = "Display hover actions and enter" })
