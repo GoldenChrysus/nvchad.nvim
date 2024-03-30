@@ -20,6 +20,7 @@ return {
         "rust-analyzer",
         "typescript-language-server",
         "pyright",
+        "solargraph",
       },
     },
   },
