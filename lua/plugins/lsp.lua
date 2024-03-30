@@ -2,8 +2,13 @@ return {
   {
     "ray-x/lsp_signature.nvim",
     event = "VeryLazy",
-    config = function()
-      require("lsp_signature").setup {}
+    config = function(_, bufnr)
+      require("lsp_signature").setup({
+        hint_enable = false,
+        toggle_key = "<M-d>",
+        toggle_key_flip_floatwin_setting = true,
+        fix_pos = true,
+      }, bufnr)
     end,
   },
 
