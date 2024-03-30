@@ -15,6 +15,7 @@ return {
         "stylua",
         "html-lsp",
         "css-lsp",
+        "intelephense",
         "prettier",
         "rust-analyzer",
         "typescript-language-server",
@@ -38,6 +39,8 @@ return {
         "rust",
         "toml",
         "python",
+        "php",
+        "ruby",
       },
       highlight = {
         enable = true,
