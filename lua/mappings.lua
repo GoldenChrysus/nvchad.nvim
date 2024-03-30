@@ -20,3 +20,8 @@ end, { desc = "Go to definition" })
 map("n", "<Leader>lbR", function()
   vim.lsp.buf.rename()
 end, { desc = "Rename symbol" })
+
+vim.keymap.set("n", "<Leader>lbh", function()
+  vim.lsp.buf.hover()
+  vim.lsp.buf.hover()
+end, { desc = "Display hover actions and enter" })
