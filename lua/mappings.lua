@@ -15,7 +15,7 @@ end, { desc = "View references" })
 
 map("n", "<Leader>lbd", function()
   require("telescope.builtin").lsp_definitions()
-end, { desc = "Go-to definition" })
+end, { desc = "Go to definition" })
 
 map("n", "<Leader>lbR", function()
   vim.lsp.buf.rename()

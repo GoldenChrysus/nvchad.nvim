@@ -43,6 +43,11 @@ return {
               vim.cmd.RustLsp { "hover", "actions" }
               vim.lsp.buf.hover()
             end, { desc = "Display hover actions and enter" })
+
+            vim.keymap.set("n", "<Leader>lba", function()
+              vim.cmd.RustLsp "codeAction"
+              vim.lsp.buf.hover()
+            end, { desc = "Display code actions and enter" })
           end,
         },
       }
