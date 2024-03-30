@@ -18,6 +18,7 @@ return {
         "prettier",
         "rust-analyzer",
         "typescript-language-server",
+        "pyright",
       },
     },
   },
@@ -36,6 +37,7 @@ return {
         "tsx",
         "rust",
         "toml",
+        "python",
       },
       highlight = {
         enable = true,
