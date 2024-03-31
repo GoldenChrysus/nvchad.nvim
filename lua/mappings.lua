@@ -21,7 +21,10 @@ map("n", "<Leader>lbR", function()
   vim.lsp.buf.rename()
 end, { desc = "Rename symbol" })
 
-vim.keymap.set("n", "<Leader>lbh", function()
+map("n", "<Leader>lbh", function()
   vim.lsp.buf.hover()
   vim.lsp.buf.hover()
 end, { desc = "Display hover actions and enter" })
+
+map("n", "<Leader>fw", ":Telescope workspaces<cr>", { desc = "Telescope workspaces" })
+map("n", "<Leader>fl", ":Telescope live_grep<cr>", { desc = "Telescope live grep" })

@@ -1,5 +1,15 @@
 return {
   {
+    "natecraddock/workspaces.nvim",
+    dependencies = "nvim-telescope/telescope.nvim",
+    lazy = false,
+    config = function()
+      require("workspaces").setup()
+      require("telescope").load_extension "workspaces"
+    end,
+  },
+
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
     config = function()
