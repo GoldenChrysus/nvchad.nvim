@@ -15,7 +15,20 @@ M.ui = {
   statusline = {
     theme = "vscode_colored",
     separator_style = "round",
-    overriden_modules = nil,
+    modules = {
+      lsp = function()
+        local stl_utils = require "nvchad.stl.utils"
+        local default = "%#St_Lsp#" .. stl_utils.lsp()
+
+        if not pcall(require, "lsp_signature") then
+          return default
+        end
+
+        local lsp_sig = require("lsp_signature").status_line()
+
+        return lsp_sig.label .. " " .. default
+      end,
+    },
   },
 }
 
