@@ -4,6 +4,7 @@ local options = {
     rust = { "rustfmt" },
     -- css = { "prettier" },
     -- html = { "prettier" },
+    typescript = { "eslint_d" },
   },
 
   format_on_save = {
