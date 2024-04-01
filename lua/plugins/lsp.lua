@@ -46,21 +46,21 @@ return {
 
             vim.keymap.set("n", "<Leader>lr", function()
               vim.cmd.RustLsp "runnables"
-            end, { desc = "View runnables" })
+            end, { desc = "Lsp View runnables" })
 
             vim.keymap.set("n", "<Leader>lt", function()
               vim.cmd.RustLsp "testables"
-            end, { desc = "View testables" })
+            end, { desc = "Lsp View testables" })
 
             vim.keymap.set("n", "<Leader>lbh", function()
               vim.cmd.RustLsp { "hover", "actions" }
               vim.lsp.buf.hover()
-            end, { desc = "Display hover actions and enter" })
+            end, { desc = "Lsp Display hover actions and enter" })
 
             vim.keymap.set("n", "<Leader>lba", function()
               vim.cmd.RustLsp "codeAction"
               vim.lsp.buf.hover()
-            end, { desc = "Display code actions and enter" })
+            end, { desc = "Lsp Display code actions and enter" })
           end,
         },
       }
