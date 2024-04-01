@@ -28,5 +28,5 @@ end, { desc = "Display hover actions and enter" })
 
 map("n", "<Leader>fw", ":Telescope workspaces<cr>", { desc = "Telescope workspaces" })
 map("n", "<Leader>fl", ":Telescope live_grep<cr>", { desc = "Telescope live grep" })
-map("n", "<Leader>ltw", ":Trouble workspace_diagnostics<cr>", { desc = "Trouble workspace diagnostics" })
-map("n", "<Leader>ltd", ":Trouble document_diagnostics<cr>", { desc = "Trouble document diagnostics" })
+map("n", "<Leader>ldw", ":Trouble workspace_diagnostics<cr>", { desc = "Trouble workspace diagnostics" })
+map("n", "<Leader>ldd", ":Trouble document_diagnostics<cr>", { desc = "Trouble document diagnostics" })
