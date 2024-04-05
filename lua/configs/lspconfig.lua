@@ -4,7 +4,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
-local servers = { "html", "cssls", "pyright", "tsserver", "solargraph", "eslint" }
+local servers = { "html", "cssls", "pyright", "solargraph", "eslint" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -14,6 +14,18 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.tsserver.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "non-relative",
+      quotePreference = "single",
+    },
+  },
+}
 
 lspconfig.intelephense.setup {
   on_init = on_init,
