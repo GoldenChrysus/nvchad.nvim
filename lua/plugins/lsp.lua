@@ -66,4 +66,24 @@ return {
       }
     end,
   },
+
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "mrcjkb/rustaceanvim",
+    },
+    event = "LspAttach",
+    config = function()
+      vim.keymap.set("n", "<Leader>lTn", ":lua require('neotest').run.run()<CR>", { desc = "Neotest Run nearest test" })
+      require("neotest").setup {
+        adapters = {
+          require "rustaceanvim.neotest",
+        },
+      }
+    end,
+  },
 }
